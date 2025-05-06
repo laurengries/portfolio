@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheet.css">
+    <title>LG Portfolio</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navdiv">
+            <div class="logo"><a href="index.html"><img src="img/Asset-3.png"></a></div>
+                <label class="checkbox1"><input type="checkbox" class="hidden-nav-checkbox1"/>WORK</label>
+                <!-- <li><a href="/">WORK▼</a></li> -->
+                <li><a href="contact.html">CONTACT</a></li>
+        </div>
+    </nav>
+    <nav class="hidden-navbar">
+        <div class="hidden-navdiv">
+            <label class="checkbox2"><input type="checkbox" class="hidden-nav-checkbox2">WORK</label>
+            <hr>
+            <li><a href="corporate.html">Corporate Work</a></li>
+            <hr>
+            <li><a href="sports.html">Sports Graphics</a></li>
+            <hr>
+            <li><a href="photography.html">Photography</a></li> 
+            <hr> 
+        </div>
+    </nav>
+
+
+    <div class="main-text">
+      Designing sports graphics started as a fun way to combine my love for design and my love for the game. Whether it's hyping up a big matchup or celebrating a players big moment, I enjoy creating visuals that bring the energy of sports to life. I focus on bold, clean designs that feel fresh and exciting—something that athletes, teams, and fans can be proud to share. It is all about matching the intensity of the sport with standout visuals.
+    </div>
+
+<!-- Image Gallery (Stacked) -->
+<div class="imgcontainer">
+    <div class="image"><img src="assets/sports1.jpg" alt="Image 1" /></div>
+    <div class="image"><img src="assets/sports2.jpg" alt="Image 2" /></div>
+    <div class="image"><img src="assets/sports3.jpg" alt="Image 3" /></div>
+    <div class="image"><img src="assets/sports4.jpg" alt="Image 4" /></div>
+    <div class="image"><img src="assets/sports5.jpg" alt="Image 4" /></div>
+  </div>
+
+  <!-- Popup -->
+  <div class="popup">
+    <span>&times;</span>
+    <img src="" alt="Popup" />
+  </div>
+
+  <div class="space"></div>
+     <footer></footer>
+     <script src="index.js"></script>
+  <script>
+    const images = document.querySelectorAll('.imgcontainer img');
+    const popup = document.querySelector('.popup');
+    const popupImage = document.querySelector('.popup img');
+    const closeBtn = document.querySelector('.popup span');
+
+    images.forEach(image => {
+      image.addEventListener('click', () => {
+        popup.style.display = 'block';
+        popupImage.src = image.src;
+      });
+    });
+
+    closeBtn.addEventListener('click', () => {
+      popup.style.display = 'none';
+    });
+  </script>
+   <script src="index.js"></script>
+
+</body>
+</html>

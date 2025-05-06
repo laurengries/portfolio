@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="stylesheet.css" />
+  <title>LG Portfolio</title>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="navdiv">
+        <div class="logo"><a href="index.html"><img src="img/Asset-3.png"></a></div>
+            <label class="checkbox1"><input type="checkbox" class="hidden-nav-checkbox1"/>WORK</label>
+            <!-- <li><a href="/">WORK▼</a></li> -->
+            <li><a href="contact.html">CONTACT</a></li>
+    </div>
+</nav>
+<nav class="hidden-navbar">
+    <div class="hidden-navdiv">
+        <label class="checkbox2"><input type="checkbox" class="hidden-nav-checkbox2">WORK</label>
+        <hr>
+        <li><a href="corporate.html">Corporate Work</a></li>
+        <hr>
+        <li><a href="sports.html">Sports Graphics</a></li>
+        <hr>
+        <li><a href="photography.html">Photography</a></li> 
+        <hr> 
+    </div>
+</nav>
+
+  <!-- Text Section -->
+  <div class="main-text">
+    I started shooting sports because I have always been drawn to the energy of the game—growing up, I would bring my camera to every school event just to catch the moments others might miss. There is something special about freezing that perfect shot: the grit, the celebration, the focus. For me, it is not just about action shots—it is about capturing what the game feels like, both on and off the court.
+  </div>
+
+  <!-- Image Gallery (Stacked) -->
+  <div class="imgcontainer">
+    <div class="image"><img src="assets/image1.jpeg" alt="Image 1" /></div>
+    <div class="image"><img src="assets/image2.jpeg" alt="Image 2" /></div>
+    <div class="image"><img src="assets/image3.jpeg" alt="Image 3" /></div>
+    <div class="image"><img src="assets/image4.jpeg" alt="Image 4" /></div>
+    <div class="image"><img src="assets/image5.JPG" alt="Image 4" /></div>
+    <div class="image"><img src="assets/image6.JPG" alt="Image 4" /></div>
+    <div class="image"><img src="assets/image7.JPG" alt="Image 4" /></div>
+    <div class="image"><img src="assets/image8.JPG" alt="Image 4" /></div>
+  </div>
+
+  <!-- Popup -->
+  <div class="popup">
+    <span>&times;</span>
+    <img src="" alt="Popup" />
+  </div>
+
+  <div class="space"></div>
+     <footer></footer>
+     <script src="index.js"></script>
+  <script>
+    const images = document.querySelectorAll('.imgcontainer img');
+    const popup = document.querySelector('.popup');
+    const popupImage = document.querySelector('.popup img');
+    const closeBtn = document.querySelector('.popup span');
+
+    images.forEach(image => {
+      image.addEventListener('click', () => {
+        popup.style.display = 'block';
+        popupImage.src = image.src;
+      });
+    });
+
+    closeBtn.addEventListener('click', () => {
+      popup.style.display = 'none';
+    });
+  </script>
+   <script src="index.js"></script>
+
+</body>
+</html>
